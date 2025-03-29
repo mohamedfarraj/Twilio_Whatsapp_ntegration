@@ -15,7 +15,7 @@ const client = twilio(
 const EXCEL_FILE = 'numbers2.xlsx';
 const IMAGE_FILE = "image.jpg";
 const OUTPUT_DIR = "output";
-const BASE_URL = "https://w.fouq.agency/output"; // تم تحديث الرابط ليكون السيرفر الخاص بك
+const BASE_URL = "https://w.fouq.agency"; // تم تحديث الرابط ليكون السيرفر الخاص بك
 
 // Create output directory if it doesn't exist
 if (!fs.existsSync(OUTPUT_DIR)) {
