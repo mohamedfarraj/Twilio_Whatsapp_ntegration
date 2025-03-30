@@ -82,7 +82,11 @@ async function sendWhatsAppMessage(to, name) {
 
         // Send image via Twilio
         await client.messages.create({
-            mediaUrl: [imageUrl],
+            contentSid: "HX57fae6f22af3fa4fbb5a720d32488322", // هنجيبها من Twilio لو بتحب تستخدم Content API
+            contentVariables: JSON.stringify({
+                name: name,
+                byname: to
+            }),
             from: `whatsapp:${process.env.TWILIO_WHATSAPP_NUMBER}`,
             to: `whatsapp:${to}`
         });
